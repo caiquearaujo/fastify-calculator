@@ -39,6 +39,16 @@
 		}
 	],
 	"settings": {
-		"editor.fontSize": 18
+		"editor.fontSize": 18,
+		"[javascript]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode",
+			"editor.formatOnPaste": true,
+			"editor.formatOnSave": true,
+		},
+		"[typescript]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode",
+			"editor.formatOnPaste": true,
+			"editor.formatOnSave": true,
+		},
 	}
 }

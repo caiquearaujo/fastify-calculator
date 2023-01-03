@@ -1,0 +1,22 @@
+{
+	"name": "fastify-calculator",
+	"version": "1.0.0",
+	"description": "Calculadora em fastify.",
+	"scripts": {
+		"format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+		"precommit": "npm run format"
+	},
+	"author": "caiquearaujo",
+	"license": "MIT",
+	"homepage": "https://github.com/caiquearaujo/fastify-calculator#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/caiquearaujo/fastify-calculator.git"
+	},
+	"bugs": {
+		"url": "https://github.com/caiquearaujo/fastify-calculator/issues"
+	},
+	"devDependencies": {
+		"prettier": "^2.8.1"
+	}
+}
