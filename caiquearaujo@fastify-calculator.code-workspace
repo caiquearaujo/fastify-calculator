@@ -1,7 +1,44 @@
 {
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"type": "node",
+				"request": "launch",
+				"name": "Launch Program",
+				"program": "${workspaceFolder}/src/index.ts",
+				"preLaunchTask": "tsc: build -- tsconfig.json",
+				"outFiles": ["${workspaceFolder}/build/**/*.js"]
+			},
+			{
+				"type": "node-terminal",
+				"name": "Debug Current JS File (node)",
+				"request": "launch",
+				"command": "node -- ${fileBasenameNoExtension}",
+				"cwd": "${fileDirname}"
+			},
+			{
+				"type": "node-terminal",
+				"name": "Debug Current TS File (ts-node)",
+				"request": "launch",
+				"command": "ts-node -- ${fileBasenameNoExtension}",
+				"cwd": "${fileDirname}"
+			},
+			{
+				"type": "node-terminal",
+				"name": "Debug Current Test File (npm run test)",
+				"request": "launch",
+				"command": "npm run test -- ${fileBasenameNoExtension}",
+				"cwd": "${fileDirname}"
+			}
+		]
+	},
 	"folders": [
 		{
 			"path": "."
 		}
 	],
+	"settings": {
+		"editor.fontSize": 18
+	}
 }

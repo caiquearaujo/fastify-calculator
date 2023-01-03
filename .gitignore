@@ -218,4 +218,7 @@ $RECYCLE.BIN/
 # Debug
 /debug
 
+# Build
+/build
+
 # End of https://www.toptal.com/developers/gitignore/api/node,windows,macos,linux
