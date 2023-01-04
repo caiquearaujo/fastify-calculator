@@ -20,13 +20,13 @@ module.exports = {
 	],
 	coverageReporters: ['json-summary', 'text', 'lcov'],
 	transform: {
-		'^.+\\.ts?$': 'ts-jest',
-	},
-	globals: {
-		'ts-jest': {
-			diagnostics: false,
-			tsconfig: 'tsconfig.json',
-		},
+		'^.+\\.ts?$': [
+			'ts-jest',
+			{
+				diagnostics: false,
+				tsconfig: 'tsconfig.json',
+			},
+		],
 	},
 	preset: 'ts-jest',
 	moduleFileExtensions: ['ts', 'js'],
