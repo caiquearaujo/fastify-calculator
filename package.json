@@ -5,11 +5,13 @@
 	"scripts": {
 		"check": "tsc --noEmit",
 		"check-watch": "npm run check -- --watch",
-		"build": "tsc -p tsconfig.json",
-		"watch": "tsc -p tsconfig.json --watch",
+		"build": "tsc -p tsconfig.build.json",
+		"watch": "tsc -p tsconfig.build.json --watch",
 		"format": "prettier --write \"src/**/*.ts\"",
 		"lint": "eslint --ext .ts --ignore-path .gitignore --fix src",
-		"precommit": "npm run format && npm run lint"
+		"precommit": "npm run format && npm run lint",
+		"test": "jest",
+		"test:debug": "node --inspect ./node_modules/.bin/jest --runInBand"
 	},
 	"author": "caiquearaujo",
 	"license": "MIT",
@@ -31,7 +33,9 @@
 		"eslint-config-airbnb-typescript": "^17.0.0",
 		"eslint-config-prettier": "^8.6.0",
 		"eslint-plugin-prettier": "^4.2.1",
+		"jest": "^29.3.1",
 		"prettier": "^2.8.1",
+		"ts-jest": "^29.0.3",
 		"typescript": "^4.9.4"
 	}
 }
