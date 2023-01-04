@@ -27,4 +27,12 @@ const div: TFnOperation = args => {
 	return reduce((prev, curr) => prev / curr, args);
 };
 
-export { sum, sub, mul, div };
+const square: TFnOperation = args => {
+	if (args.length !== 1) {
+		throw new Error(`Invalid number of arguments for "square" operation`);
+	}
+
+	return args[0] * args[0];
+};
+
+export { sum, sub, mul, div, square };
