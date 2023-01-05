@@ -18,6 +18,13 @@ export interface IPrivateCalculator<T = number> extends IPublicCalculator<T> {
 	register(name: string, fn: TFnOperation<T>): void;
 }
 
+export type TEnvVariables = {
+	name: string;
+	version: string;
+	port: number;
+	host: string;
+};
+
 export type FastifyApplication = FastifyInstance<
 	http.Server,
 	http.IncomingMessage,
