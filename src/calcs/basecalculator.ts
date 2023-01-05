@@ -1,4 +1,4 @@
-import { IPrivateCalculator, IPublicCalculator, TFnOperation } from '../types';
+import { IPrivateCalculator, IPublicCalculator, TFnOperation } from '@/types';
 
 export default class BaseCalculator<T = number>
 	implements IPrivateCalculator<T>

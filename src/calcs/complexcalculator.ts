@@ -1,5 +1,5 @@
-import { square } from '../operations';
-import { IPrivateCalculator, IPublicCalculator } from '../types';
+import { square } from '@/operations';
+import { IPrivateCalculator, IPublicCalculator } from '@/types';
 import BaseCalculator from './basecalculator';
 
 export default class ComplexCalculator

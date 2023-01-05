@@ -11,6 +11,7 @@
 		"prettier"
 	],
 	"plugins": [
+		"import",
 		"@typescript-eslint",
 		"prettier"
 	],
@@ -22,6 +23,16 @@
 			"jsx": false
 		},
 		"project": ["tsconfig.json"]
+	},
+	"settings": {
+		"import/parsers": {
+			"@typescript-eslint/parser": [".ts", ".tsx"]
+		},
+		"import/resolver": {
+			"typescript": {
+				"project": "./tsconfig.json"
+			}
+		}
 	},
 	"rules": {
 		"arrow-body-style": "off",

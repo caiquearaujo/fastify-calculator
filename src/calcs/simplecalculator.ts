@@ -1,5 +1,5 @@
-import { div, mul, sub, sum } from '../operations';
-import { IPrivateCalculator, IPublicCalculator } from '../types';
+import { div, mul, sub, sum } from '@/operations';
+import { IPrivateCalculator, IPublicCalculator } from '@/types';
 import BaseCalculator from './basecalculator';
 
 export default class SimpleCalculator

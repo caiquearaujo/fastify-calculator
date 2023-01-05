@@ -1,4 +1,4 @@
-import { TFnOperation, TFnReduce } from './types';
+import { TFnOperation, TFnReduce } from '@/types';
 
 const reduce: TFnReduce = (fn, args) => {
 	if (args.length <= 1) {

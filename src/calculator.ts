@@ -1,6 +1,6 @@
-import ComplexCalculator from './calcs/complexcalculator';
-import SimpleCalculator from './calcs/simplecalculator';
-import { IPublicCalculator } from './types';
+import ComplexCalculator from '@/calcs/complexcalculator';
+import SimpleCalculator from '@/calcs/simplecalculator';
+import { IPublicCalculator } from '@/types';
 
 export default class Calculator {
 	private simpleCalc: IPublicCalculator<number>;
