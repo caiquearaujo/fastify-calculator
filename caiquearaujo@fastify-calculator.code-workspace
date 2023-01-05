@@ -28,7 +28,7 @@
 				"type": "node-terminal",
 				"name": "Debug Current Test File (npm run test)",
 				"request": "launch",
-				"command": "npm run test -- ${fileBasenameNoExtension}",
+				"command": "npm run test:debug -- ${fileBasenameNoExtension}",
 				"cwd": "${fileDirname}"
 			}
 		]
