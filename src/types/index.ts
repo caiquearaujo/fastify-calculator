@@ -18,6 +18,10 @@ export interface IPrivateCalculator<T = number> extends IPublicCalculator<T> {
 	register(name: string, fn: TFnOperation<T>): void;
 }
 
+export interface IApplyToFastify {
+	apply(app: FastifyApplication, env: TEnvVariables): void;
+}
+
 export type TEnvVariables = {
 	name: string;
 	version: string;
