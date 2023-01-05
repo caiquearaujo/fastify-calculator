@@ -22,6 +22,10 @@ export interface IApplyToFastify {
 	apply(app: FastifyApplication, env: TEnvVariables): void;
 }
 
+export interface IRegisterToFastify {
+	register(app: FastifyApplication, env: TEnvVariables): void;
+}
+
 export type TEnvVariables = {
 	name: string;
 	version: string;
