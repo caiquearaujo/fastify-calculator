@@ -8,4 +8,4 @@ config({
 	path: `${DIR}/.env.${ENVIRONMENT}`,
 });
 
-export const { NAME, VERSION, PORT } = process.env;
+export const { NAME, VERSION, PORT, HOST } = process.env;
