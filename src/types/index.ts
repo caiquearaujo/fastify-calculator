@@ -26,13 +26,21 @@ export interface IRegisterToFastify {
 	register(app: FastifyApplication, env: TEnvVariables): void;
 }
 
+export interface IHttpServer {
+	api: IApiServer;
+	start(): Promise<boolean>;
+	restart(): Promise<boolean>;
+	stop(): Promise<boolean>;
+	isRunning(): boolean;
+}
+
 export interface IApiServer {
 	app: FastifyApplication;
 	router: IApplyToFastify;
 	pluginRegister: IRegisterToFastify;
 	env: TEnvVariables;
 
-	bootstrap(): Promise<void>;
+	bootstrap(): Promise<IHttpServer>;
 }
 
 export type TEnvVariables = {

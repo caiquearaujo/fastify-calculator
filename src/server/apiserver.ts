@@ -1,9 +1,15 @@
 import fastify from 'fastify';
 
-import { FastifyApplication, IApiServer, TEnvVariables } from '@/types';
+import {
+	FastifyApplication,
+	IApiServer,
+	IHttpServer,
+	TEnvVariables,
+} from '@/types';
 import { ENVIRONMENT, HOST, NAME, PORT, VERSION } from './config';
 import PluginRegister from './pluginregister';
 import Router from './router';
+import HttpServer from './httpserver';
 
 export default class ApiServer implements IApiServer {
 	app: FastifyApplication;
@@ -32,9 +38,9 @@ export default class ApiServer implements IApiServer {
 		this.pluginRegister = options.pluginRegister;
 	}
 
-	public async bootstrap(): Promise<void> {
+	public async bootstrap(): Promise<IHttpServer> {
 		await this.init();
-		// return new HttpServer(this.app, this);
+		return new HttpServer(this);
 	}
 
 	protected async init(): Promise<void> {
